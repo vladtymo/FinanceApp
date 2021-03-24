@@ -1,0 +1,72 @@
+﻿<Window x:Class="Client.LoginAuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="FinanceApp Login" 
+        Height="450" 
+        Width="600"
+        Icon="/logo.jpg">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.8*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+
+            <Image Source="/logo.jpg" Grid.Row="0"/>
+            <TextBlock Grid.Row="1" Text="Authorization" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Medium" Foreground="Gray"/>
+        </Grid>
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Top">
+
+            <TextBox
+                Margin="5"
+                FontSize="15"
+                materialDesign:HintAssist.Hint="Login"
+                materialDesign:HintAssist.Foreground="Gold"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"              
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center"
+                MinWidth="300"/>
+
+            <PasswordBox
+                Margin="5"
+                FontSize="15"
+                materialDesign:HintAssist.Hint="Password"
+                materialDesign:HintAssist.Foreground="Gold"
+                Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center"
+                MinWidth="300"/>
+
+            <Button
+                Foreground="White"
+                Background="Green"
+                Margin="5"
+                Style="{StaticResource MaterialDesignFlatMidBgButton}"              
+                Width="100">
+                Login
+            </Button>
+            
+            <Button
+                Foreground="Black"
+                Background="DarkGray"
+                Margin="5"
+                Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                Width="100">
+                Register
+            </Button>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

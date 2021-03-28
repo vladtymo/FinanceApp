@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1145
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{69A77E1F-E729-4C92-AA13-7E604B9AFF5E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{663CC288-43DA-4052-BE9B-979209BE0974}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{179918FD-8C21-4F85-A87E-38D697558DB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exchange rate", "Exchange rate\Exchange rate.csproj", "{6C5232F3-D834-4C94-91A9-8509596D7BEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{179918FD-8C21-4F85-A87E-38D697558DB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{179918FD-8C21-4F85-A87E-38D697558DB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{179918FD-8C21-4F85-A87E-38D697558DB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C5232F3-D834-4C94-91A9-8509596D7BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C5232F3-D834-4C94-91A9-8509596D7BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C5232F3-D834-4C94-91A9-8509596D7BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C5232F3-D834-4C94-91A9-8509596D7BEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

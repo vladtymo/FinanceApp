@@ -23,5 +23,15 @@ namespace Client
         {
             InitializeComponent();
         }
+
+        private void btnRegisterClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnLoginClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -23,5 +23,15 @@ namespace Client
         {
             InitializeComponent();
         }
+
+        private void btnGoBackClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnRegisterClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

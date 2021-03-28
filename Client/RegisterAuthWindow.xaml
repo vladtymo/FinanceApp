@@ -29,6 +29,7 @@
         <StackPanel Grid.Row="1" VerticalAlignment="Top">
 
             <TextBox
+                Name="txtLogin"
                 Margin="5"
                 FontSize="15"
                 materialDesign:HintAssist.Hint="Login"
@@ -39,6 +40,7 @@
                 MinWidth="300"/>
 
             <PasswordBox
+                Name="txtPassword"
                 Margin="5"
                 FontSize="15"
                 materialDesign:HintAssist.Hint="Password"
@@ -49,6 +51,8 @@
                 MinWidth="300"/>
 
             <Button
+                Name="btnRegister"
+                Click="btnRegisterClick"
                 Foreground="White"
                 Background="Green"
                 Margin="5"
@@ -58,6 +62,8 @@
             </Button>
 
             <Button
+                Name="btnGoBack"
+                Click="btnGoBackClick"
                 Foreground="Black"
                 Background="DarkGray"
                 Margin="5"

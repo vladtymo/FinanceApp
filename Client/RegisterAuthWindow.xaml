@@ -23,10 +23,11 @@
             </Grid.RowDefinitions>
 
             <Image Source="/logo.jpg" Grid.Row="0"/>
-            <TextBlock Grid.Row="1" Text="Authorization" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Medium" Foreground="Gray"/>
+            <TextBlock Grid.Row="1" x:Name="authorization" Text="Authorization" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Medium" Foreground="Gray"/>
         </Grid>
 
         <StackPanel Grid.Row="1" VerticalAlignment="Top">
+
 
             <TextBox
                 Name="txtLogin"
@@ -38,6 +39,7 @@
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Center"
                 MinWidth="300"/>
+
 
             <PasswordBox
                 Name="txtPassword"

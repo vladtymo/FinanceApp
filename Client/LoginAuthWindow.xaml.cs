@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,9 +18,11 @@ namespace Client
     public partial class LoginAuthWindow : Window
     {
         private RegisterAuthWindow windowRegister;
+        private UsersDb userDb;
         public LoginAuthWindow()
         {
             InitializeComponent();
+            userDb = new UsersDb();
         }
 
         // переходимо до вікна Registration
@@ -32,7 +35,33 @@ namespace Client
 
         private void btnLoginClick(object sender, RoutedEventArgs e)
         {
+            windowRegister = new RegisterAuthWindow();
 
+            string hash = txtPassword.Password + " " + txtLogin.Text;
+            string passHash = windowRegister.ComputeSha256Hash(hash);
+            windowRegister = null;
+
+            foreach (var item in userDb.GetAllUsers())
+            {
+                if (txtLogin.Text == item.Login)
+                {
+                    if (item.Password == passHash)
+                    {
+                        MessageBox.Show("OPEN NEW WINDOW");
+
+                        // OPEN MAIN WINDOW
+                                                
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid login information");
+                        return;
+                    }
+                }
+            }
+            MessageBox.Show("User does not exist");
         }
     }
 }
+

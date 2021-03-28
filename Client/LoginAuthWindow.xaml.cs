@@ -14,19 +14,20 @@ using System.Windows.Shapes;
 
 namespace Client
 {
-    /// <summary>
-    /// Interaction logic for LoginAuthWindow.xaml
-    /// </summary>
     public partial class LoginAuthWindow : Window
     {
+        private RegisterAuthWindow windowRegister;
         public LoginAuthWindow()
         {
             InitializeComponent();
         }
 
+        // переходимо до вікна Registration
         private void btnRegisterClick(object sender, RoutedEventArgs e)
         {
-
+            windowRegister = new RegisterAuthWindow();
+            this.Close();
+            windowRegister.ShowDialog();
         }
 
         private void btnLoginClick(object sender, RoutedEventArgs e)

@@ -62,7 +62,7 @@
                 Background="DarkGray"
                 Margin="5"
                 Style="{StaticResource MaterialDesignFlatMidBgButton}"
-                Width="100">
+                Width="100" Click="Button_Click">
                 Go back
             </Button>
 

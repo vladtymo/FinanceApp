@@ -10,6 +10,9 @@
         Height="450" 
         Width="600"
         Icon="/logo.jpg">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.3*"/>
@@ -36,36 +39,40 @@
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"              
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Center"
-                MinWidth="300"/>
+                MinWidth="300"
+                Text="{Binding Login, Mode=TwoWay}"/>
 
-            <PasswordBox
+            <TextBox
                 Margin="5"
                 FontSize="15"
                 materialDesign:HintAssist.Hint="Password"
                 materialDesign:HintAssist.Foreground="Gold"
-                Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"              
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Center"
-                MinWidth="300"/>
+                MinWidth="300"
+                Text="{Binding Password, Mode=TwoWay}"/>
 
             <Button
                 Foreground="White"
                 Background="Green"
                 Margin="5"
                 Style="{StaticResource MaterialDesignFlatMidBgButton}"              
-                Width="100">
+                Width="100"
+                Command="{Binding LoginRequestCommand}">
                 Login
             </Button>
-            
+
             <Button
                 Foreground="Black"
                 Background="DarkGray"
                 Margin="5"
                 Style="{StaticResource MaterialDesignFlatMidBgButton}"
-                Width="100">
+                Width="100" Click="Button_Click">
                 Register
             </Button>
 
+            <TextBlock Text="Wrong login or password!" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Medium" Foreground="Red" Visibility="{Binding Path=AdvancedFormat, Mode=TwoWay, Converter={StaticResource BoolToVis}}"/>
         </StackPanel>
 
     </Grid>

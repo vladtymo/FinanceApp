@@ -65,6 +65,7 @@
     </ApplicationDefinition>
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\DelegateCommand.cs" />
+    <Compile Include="LoginAuthViewModel.cs" />
     <Compile Include="RegisterAuthWindow.xaml.cs">
       <DependentUpon>RegisterAuthWindow.xaml</DependentUpon>
     </Compile>

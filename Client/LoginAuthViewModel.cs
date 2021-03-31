@@ -16,7 +16,21 @@ namespace Client
         private string login;
         private string password;
 
-        public bool LoginStatus { get; set; }
+        private bool loginStatus;
+        public bool LoginStatus
+        {
+            get => loginStatus;
+
+            set
+            {
+                if(loginStatus != value)
+                {
+                    loginStatus = value;
+
+                    OnPropertyChanged();
+                }
+            }
+        }
 
         public string Login
         {

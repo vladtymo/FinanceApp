@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace ServerTypes
 {
-    class HelloCommand : ICommand
+    public class HelloCommand : ICommand
     {
-        public object Content { get; set; }
-
-        public ICommandResult Execute()
+        public CommandResult Execute(object parameters)
         {
-            return new HelloCommandResult("Hello from server!");
+            return new CommandResult($"Hello {parameters} from server!", typeof(HelloCommand));
         }
     }
 }

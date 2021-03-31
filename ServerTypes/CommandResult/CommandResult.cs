@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace ServerTypes
 {
-    class HelloCommandResult : ICommandResult
+    public class CommandResult 
     {
         public object Result { get; set; }
-        public Type CommandType { get => typeof(HelloCommand); }
 
-        public HelloCommandResult(object result)
+        public Type CommandType { get; set; }
+
+        public CommandResult(object result, Type command)
         {
             Result = result;
+
+            CommandType = command;
         }
     }
 }

@@ -2,8 +2,6 @@
 {
     public interface ICommand
     {
-        object Content { get; set; }
-
-        ICommandResult Execute();
+        CommandResult Execute(object parameters);
     }
 }

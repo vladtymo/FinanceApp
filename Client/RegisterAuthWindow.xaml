@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
         Title="FinanceApp Register" 
-        Height="450" 
+        Height="800" 
         Width="600"
         Icon="/logo.jpg">
     <Grid>
@@ -36,24 +36,60 @@
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"              
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Center"
-                MinWidth="300"/>
+                MinWidth="300"
+                Text="{Binding Login}"/>
 
-            <PasswordBox
+            <TextBox
                 Margin="5"
                 FontSize="15"
                 materialDesign:HintAssist.Hint="Password"
                 materialDesign:HintAssist.Foreground="Gold"
-                Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"              
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Center"
-                MinWidth="300"/>
+                MinWidth="300"
+                Text="{Binding Password}"/>
+
+            <TextBox
+                Margin="5"
+                FontSize="15"
+                materialDesign:HintAssist.Hint="Name"
+                materialDesign:HintAssist.Foreground="Gold"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"              
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center"
+                MinWidth="300"
+                Text="{Binding Name}"/>
+
+            <TextBox
+                Margin="5"
+                FontSize="15"
+                materialDesign:HintAssist.Hint="Surname"
+                materialDesign:HintAssist.Foreground="Gold"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"              
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center"
+                MinWidth="300"
+                Text="{Binding Surname}"/>
+
+            <TextBox
+                Margin="5"
+                FontSize="15"
+                materialDesign:HintAssist.Hint="Email"
+                materialDesign:HintAssist.Foreground="Gold"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"              
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center"
+                MinWidth="300"
+                Text="{Binding Email}"/>
 
             <Button
                 Foreground="White"
                 Background="Green"
                 Margin="5"
                 Style="{StaticResource MaterialDesignFlatMidBgButton}"              
-                Width="100">
+                Width="100"
+                Command="{Binding RegisterRequestCommand}">
                 Register
             </Button>
 
@@ -62,7 +98,7 @@
                 Background="DarkGray"
                 Margin="5"
                 Style="{StaticResource MaterialDesignFlatMidBgButton}"
-                Width="100">
+                Width="100" Click="Button_Click">
                 Go back
             </Button>
 

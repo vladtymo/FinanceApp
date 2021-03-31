@@ -63,6 +63,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\DelegateCommand.cs" />
+    <Compile Include="LoginAuthViewModel.cs" />
+    <Compile Include="RegisterAuthViewModel.cs" />
     <Compile Include="RegisterAuthWindow.xaml.cs">
       <DependentUpon>RegisterAuthWindow.xaml</DependentUpon>
     </Compile>

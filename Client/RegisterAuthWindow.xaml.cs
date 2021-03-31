@@ -19,9 +19,22 @@ namespace Client
     /// </summary>
     public partial class RegisterAuthWindow : Window
     {
+        private RegisterAuthViewModel viewModel;
+
         public RegisterAuthWindow()
         {
             InitializeComponent();
+
+            viewModel = new RegisterAuthViewModel();
+
+            this.DataContext = viewModel;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            LoginAuthWindow win = new LoginAuthWindow();
+            win.Show();
+            this.Close();
         }
     }
 }

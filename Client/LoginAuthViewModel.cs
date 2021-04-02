@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using Client.Commands;
+using ServerTypes;
 
 namespace Client
 {
@@ -59,9 +60,9 @@ namespace Client
             }
         }
 
-        private Command loginRequestCommand;
+        private Commands.Command loginRequestCommand;
 
-        public ICommand LoginRequestCommand => loginRequestCommand;
+        public System.Windows.Input.ICommand LoginRequestCommand => loginRequestCommand;
 
         public LoginAuthViewModel()
         {

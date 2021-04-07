@@ -57,7 +57,7 @@
     <Compile Include="EF\Initializer.cs" />
     <Compile Include="EF\MyDbContext.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="Interfaces\IUserRepositiry.cs" />
+    <Compile Include="Interfaces\IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\UsersRepository.cs" />
   </ItemGroup>

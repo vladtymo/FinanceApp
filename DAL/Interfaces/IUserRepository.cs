@@ -11,5 +11,7 @@ namespace DAL.Interfaces
     {
         Task Create(User user);
         Task UpdatePassword(int id, string newPassword);
+        Task<User> GetById(int id);
+        Task<User> GetByLogin(string login);
     }
 }

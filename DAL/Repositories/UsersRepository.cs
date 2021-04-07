@@ -25,7 +25,20 @@ namespace DAL.Repositories
             myDbContext.Users.Add(user);
             await myDbContext.SaveChangesAsync();
         }
-
+        public Task<User> GetById(int id)
+        {
+            return Task.Run(() =>
+            {
+                return myDbContext.Users.FirstOrDefault(s => s.Id == id);
+            });
+        }
+        public Task<User> GetByLogin(string login)
+        {
+            return Task.Run(() =>
+            {
+                return myDbContext.Users.FirstOrDefault(s => s.Login == login);
+            });
+        }
         public async Task UpdatePassword(int id, string newPassword)
         {
             var _user = myDbContext.Users.FirstOrDefault(s => s.Id == id);

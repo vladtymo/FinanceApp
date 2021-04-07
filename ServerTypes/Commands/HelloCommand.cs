@@ -9,8 +9,11 @@ namespace ServerTypes
     public class HelloCommand : ICommand
     {
         public CommandResult Execute(object parameters)
-        {
-            return new CommandResult($"Hello {parameters} from server!", typeof(HelloCommand));
+        {        
+
+            Console.WriteLine($"Hello Command: {parameters.GetType()}");
+
+            return new CommandResult($"Hello from server!", typeof(HelloCommand));
         }
     }
 }

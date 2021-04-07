@@ -81,7 +81,11 @@ namespace Client
 
         private void LoginRequest()
         {
-            // TODO: Request to server...
+            ClientConnection.Connect("127.0.0.1", 20444);
+
+            CommandResult res = ClientConnection.Send(new LoginCommand(), new object[] { Login, Password});
+
+            MessageBox.Show(res.Result.ToString());
 
             LoginStatus = true;
         }

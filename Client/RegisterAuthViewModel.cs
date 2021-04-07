@@ -1,4 +1,5 @@
 ﻿using Client.Commands;
+using ServerTypes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -89,7 +90,7 @@ namespace Client
             }
         }
 
-        public ICommand RegisterRequestCommand => registerRequestCommand;
+        public System.Windows.Input.ICommand RegisterRequestCommand => registerRequestCommand;
 
         private Command registerRequestCommand;
 
@@ -107,7 +108,12 @@ namespace Client
 
         public void RegisterRequest()
         {
-            // TODO: Request to server...
+            // [0] - Login; [1] - Password; [2] - Email; [3] - Name; [4] - Suranme;
+
+            ClientConnection.Connect("127.0.0.1", 20444);
+
+            ClientConnection.Send(new RegisterCommand(), new object[] { Login, Password, Email, Name, Surname});
+
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

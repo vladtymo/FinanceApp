@@ -43,10 +43,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandResult\CommandResult.cs" />
-    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\LoginCommand.cs" />
+    <Compile Include="Commands\RegisterCommand.cs" />
+    <Compile Include="Commands\Request.cs" />
     <Compile Include="Commands\HelloCommand.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{179918fd-8c21-4f85-a87e-38d697558db2}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

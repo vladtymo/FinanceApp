@@ -3,6 +3,7 @@ using System.Net.Sockets;
 using System.Text;
 using ServerTypes;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Server
 {
@@ -33,9 +34,16 @@ namespace Server
                     }
                     while (stream.DataAvailable);
 
-                    Command command = JsonConvert.DeserializeObject<Command>(builder.ToString());    
+                    Request request = JsonConvert.DeserializeObject<Request>(builder.ToString());
 
-                    string result = JsonConvert.SerializeObject((Activator.CreateInstance(command.CommandType) as ICommand).Execute(command.Parameters), Formatting.Indented);
+                    object parameters = request.Parameters;
+
+                    if (request.Parameters is JArray)
+                    {
+                        parameters = (request.Parameters as JArray).ToObject<object[]>();                    
+                    }
+
+                    string result = JsonConvert.SerializeObject((Activator.CreateInstance(request.CommandType) as ICommand).Execute(parameters), Formatting.Indented);
 
                     buffer = Encoding.UTF8.GetBytes(result);
 

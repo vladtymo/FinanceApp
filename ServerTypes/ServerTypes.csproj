@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandResult\CommandResult.cs" />
-    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\Request.cs" />
     <Compile Include="Commands\HelloCommand.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

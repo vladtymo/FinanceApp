@@ -33,9 +33,9 @@ namespace Server
                     }
                     while (stream.DataAvailable);
 
-                    Command command = JsonConvert.DeserializeObject<Command>(builder.ToString());    
+                    Request request = JsonConvert.DeserializeObject<Request>(builder.ToString());    
 
-                    string result = JsonConvert.SerializeObject((Activator.CreateInstance(command.CommandType) as ICommand).Execute(command.Parameters), Formatting.Indented);
+                    string result = JsonConvert.SerializeObject((Activator.CreateInstance(request.CommandType) as ICommand).Execute(request.Parameters), Formatting.Indented);
 
                     buffer = Encoding.UTF8.GetBytes(result);
 

@@ -38,7 +38,7 @@ namespace Client
             {
                 NetworkStream stream = client.GetStream();
 
-                byte[] buffer = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(new Command(parameters, command.GetType()), Formatting.Indented));
+                byte[] buffer = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(new Request(parameters, command.GetType()), Formatting.Indented));
 
                 stream.Write(buffer, 0, buffer.Length);
 

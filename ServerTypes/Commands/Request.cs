@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ServerTypes
 {
-    public class Command
+    public class Request
     {
         public object Parameters { get; set; }
 
         public Type CommandType { get; set; }
 
-        public Command(object parameters, Type command)
+        public Request(object parameters, Type command)
         {
             Parameters = parameters;
 

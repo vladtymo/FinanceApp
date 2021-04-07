@@ -19,7 +19,7 @@ namespace ServerTypes
                 return new CommandResult(false, typeof(RegisterCommand));
             }
 
-            IUserRepository userRepository = new UsersRepository(new MyDbContext());
+            UsersRepository userRepository = new UsersRepository(new MyDbContext());
 
             // [0] - Login; [1] - Password; [2] - Email; [3] - Name; [4] - Suranme;
             object[] userData = parameters as object[];

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerTypes", "ServerTypes\ServerTypes.csproj", "{EE2E3FB9-7DFD-4527-A020-01626C2B7380}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletWindow", "WalletWindow\WalletWindow.csproj", "{4303A42A-F74A-4B32-AB7E-AD4A3552E08A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{EE2E3FB9-7DFD-4527-A020-01626C2B7380}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE2E3FB9-7DFD-4527-A020-01626C2B7380}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE2E3FB9-7DFD-4527-A020-01626C2B7380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4303A42A-F74A-4B32-AB7E-AD4A3552E08A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4303A42A-F74A-4B32-AB7E-AD4A3552E08A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4303A42A-F74A-4B32-AB7E-AD4A3552E08A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4303A42A-F74A-4B32-AB7E-AD4A3552E08A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

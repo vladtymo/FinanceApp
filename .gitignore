@@ -3,6 +3,8 @@
 
 #ignore
 DAL/App.config
+ExchangeRate/
+WalletWindow/
 
 # User-specific files
 *.suo

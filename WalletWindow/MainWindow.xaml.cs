@@ -14,18 +14,30 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using WalletWindow.Themes;
+using System.Net;
+using Newtonsoft.Json;
 
 namespace WalletWindow
 {
     public partial class MainWindow : Window
     {
+        const string LINK = "https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5";
         public string CurrentDate { get; set; }
+        public string CurrentCurrency { get; set; }
+
         private DispatcherTimer timer;
         double panelWidth;
         bool hidden;
         public MainWindow()
         {
             InitializeComponent();
+
+            using (WebClient client = new WebClient())
+            {
+                var json = client.DownloadString(LINK);
+                var result = JsonConvert.DeserializeObject<List<ExchangeRate>>(json);
+                CurrentCurrency = result[0].sale;
+            }
 
             CurrentDate = DateTime.Now.ToShortDateString().ToString();
 

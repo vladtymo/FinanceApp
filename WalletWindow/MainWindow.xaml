@@ -271,7 +271,7 @@
 
                 <StackPanel Grid.Column="2" Margin="0 5 0 0">
                     <TextBlock Text="Exchange rate" Style="{StaticResource TextHeaderFirst}"/>
-                    <TextBlock Text="200" Style="{StaticResource TextHeaderSecond}"/>
+                <TextBlock Text="{Binding CurrentCurrency}" Style="{StaticResource TextHeaderSecond}"/>
                 </StackPanel>
 
                 <StackPanel Grid.Column="3" VerticalAlignment="Center">

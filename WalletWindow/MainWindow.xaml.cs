@@ -17,12 +17,8 @@ using WalletWindow.Themes;
 
 namespace WalletWindow
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        //static bool checkMenu = true; 
         public string CurrentDate { get; set; }
         private DispatcherTimer timer;
         double panelWidth;
@@ -64,18 +60,6 @@ namespace WalletWindow
             }
         }
 
-        private void ChangeTheme(object sender, RoutedEventArgs e)
-        {
-            switch (int.Parse(((Button)sender).Uid))
-            {
-                case 0: ThemesController.SetTheme(ThemesController.ThemeTypes.Light); break;
-                case 1: ThemesController.SetTheme(ThemesController.ThemeTypes.ColourfulLight); break;
-                case 2: ThemesController.SetTheme(ThemesController.ThemeTypes.Dark); break;
-                case 3: ThemesController.SetTheme(ThemesController.ThemeTypes.ColourfulDark); break;
-            }
-            e.Handled = true;
-        }
-
         private void btnClickMenu(object sender, RoutedEventArgs e)
         {
             timer.Start();
@@ -91,27 +75,13 @@ namespace WalletWindow
 
         private void btnChangeTheme(object sender, RoutedEventArgs e)
         {
-
+            PageTheme pageTheme = new PageTheme();
+            pageTheme.Show();
         }
 
-        //private void Button_Click(object sender, RoutedEventArgs e)
-        //{
-
-        //}
-
-        //private void buttonMenuClick(object sender, RoutedEventArgs e)
-        //{
-        //    if (checkMenu)
-        //    {
-        //        borderMain.Width = this.Width - groupBox.Width;
-        //        checkMenu = false;
-        //    }
-        //    else
-        //    {
-        //        borderMain.Width = this.Width + groupBox.Width;
-        //        checkMenu = true;
-        //    }
-
-        //}
+        private void btnClickExit(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

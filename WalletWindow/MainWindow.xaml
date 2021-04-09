@@ -160,7 +160,7 @@
 
                     <GridSplitter Height="5"></GridSplitter>
 
-                    <Button>
+                    <Button Click="btnClickExit">
                         <Grid Style="{StaticResource GridButton}">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="{Binding ElementName=tbnExit, Path=Width}"/>

@@ -39,6 +39,8 @@ namespace WalletWindow
                 case 3: ThemesController.SetTheme(ThemesController.ThemeTypes.ColourfulDark); break;
             }
             e.Handled = true;
+
+            // this.Close();
         }
     }
 }

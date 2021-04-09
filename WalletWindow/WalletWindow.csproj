@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework.Aero" />
     <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -146,6 +147,25 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\clothing.png" />
+    <Resource Include="Icons\different.png" />
+    <Resource Include="Icons\electronics.png" />
+    <Resource Include="Icons\entertainment.png" />
+    <Resource Include="Icons\food.png" />
+    <None Include="Icons\online" />
+    <Resource Include="Icons\medicine.png" />
+    <Resource Include="Icons\online shopping.png" />
+    <Resource Include="Icons\products.png" />
+    <Resource Include="Icons\shipping.png" />
+    <Resource Include="Icons\transport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\shopping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\payment house.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
